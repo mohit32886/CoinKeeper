@@ -1,11 +1,13 @@
 {
-  "name": "week-18",
+  "name": "coinkeeper",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "generate": "cd packages/database && npm run db:generate",
+    "push": "cd packages/database && npm run db:push"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
