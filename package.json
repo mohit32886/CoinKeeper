@@ -3,11 +3,15 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "db:migrate:deploy": "turbo run db:migrate:deploy",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "generate": "cd packages/database && npm run db:generate",
-    "push": "cd packages/database && npm run db:push"
+    "generate": "turbo run generate"
+  },
+  "prisma": {
+    "schema": "packages/db/prisma/schema.prisma",
+    "seed": "tsx packages/db/prisma/seed.ts"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
