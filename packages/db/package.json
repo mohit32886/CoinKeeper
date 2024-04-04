@@ -5,10 +5,16 @@
         "@prisma/client": "^5.11.0",
         "prisma": "5.11.0"
     },
+    "scripts": {
+        "db:generate": "prisma generate",
+        "db:push": "prisma db push --skip-generate"
+      },
     "exports": {
         "./client": "./index.ts"
     },
     "prisma": {
         "seed": "ts-node prisma/seed.ts"
-    }
+    },
+    "main": "./index.ts",
+    "types": "./index.ts"
 }
